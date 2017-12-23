@@ -75,11 +75,11 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>../../Lib/DxLib/Include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../../Lib/DxLib/Include/</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>../../Lib/DxLib/Include</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>../../../Lib/DxLib/Include</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -87,11 +87,11 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>../../Lib/DxLib/Include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../../Lib/DxLib/Include/</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>../../Lib/DxLib/Include</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>../../../Lib/DxLib/Include</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -101,13 +101,13 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>../../Lib/DxLib/Include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../../Lib/DxLib/Include/</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>../../Lib/DxLib/Include</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>../../../Lib/DxLib/Include</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -117,13 +117,13 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>../../Lib/DxLib/Include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../../Lib/DxLib/Include/</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>../../Lib/DxLib/Include</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>../../../Lib/DxLib/Include</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -150,6 +150,7 @@
   <ItemGroup>
     <ClInclude Include="AbstractBackground.h" />
     <ClInclude Include="AbstractScene.h" />
+    <ClInclude Include="Background01.h" />
     <ClInclude Include="Background01spell.h" />
     <ClInclude Include="Board.h" />
     <ClInclude Include="Define.h" />

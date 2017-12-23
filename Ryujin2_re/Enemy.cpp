@@ -14,5 +14,5 @@ bool Enemy::update() {
 }
 
 void Enemy::draw() const {
-	DrawRotaGraphF(_x, _y, 1.0, 0.0, Image::getIns()->getEnemyNormal()[4], TRUE);
+	//DrawRotaGraphF(_x, _y, 1.0, 0.0, Image::getIns()->getEnemyNormal()[4], TRUE);
 }
