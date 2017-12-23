@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -19,9 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{461177F3-15BE-4209-B89B-510DC62D9A73}</ProjectGuid>
-    <RootNamespace>Ryujin2re</RootNamespace>
+    <ProjectGuid>{D805EFBE-DA62-43C6-BB73-E8EE6DED3ECD}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Ryujin2</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -69,71 +69,97 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>../../Lib/DxLib/Include</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\Lib\DxLib\Include</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>../../Lib/DxLib/Include</AdditionalLibraryDirectories>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\..\..\Lib\DxLib\Include</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>../../Lib/DxLib/Include</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\Lib\DxLib\Include</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>../../Lib/DxLib/Include</AdditionalLibraryDirectories>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\..\..\Lib\DxLib\Include</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>../../Lib/DxLib/Include</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\Lib\DxLib\Include</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
     </ClCompile>
     <Link>
+      <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>../../Lib/DxLib/Include</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\..\..\Lib\DxLib\Include</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>../../Lib/DxLib/Include</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\Lib\DxLib\Include</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
     </ClCompile>
     <Link>
+      <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>../../Lib/DxLib/Include</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\..\..\Lib\DxLib\Include</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AbstractBackground.cpp" />
     <ClCompile Include="AbstractScene.cpp" />
+    <ClCompile Include="Background01.cpp" />
     <ClCompile Include="Background01spell.cpp" />
     <ClCompile Include="Board.cpp" />
     <ClCompile Include="Define.cpp" />
-    <ClCompile Include="Enemy.cpp" />
-    <ClCompile Include="EnemyManager.cpp" />
     <ClCompile Include="Error.cpp" />
     <ClCompile Include="Fps.cpp" />
     <ClCompile Include="GameScene.cpp" />
@@ -144,17 +170,18 @@
     <ClCompile Include="Pad.cpp" />
     <ClCompile Include="Parameter.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="Surface.cpp" />
+    <ClCompile Include="Surface.h" />
     <ClCompile Include="SystemMain.cpp" />
     <ClCompile Include="TitleScene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AbstractBackground.h" />
     <ClInclude Include="AbstractScene.h" />
+    <ClInclude Include="Background01.h" />
     <ClInclude Include="Background01spell.h" />
     <ClInclude Include="Board.h" />
     <ClInclude Include="Define.h" />
-    <ClInclude Include="Enemy.h" />
-    <ClInclude Include="EnemyManager.h" />
     <ClInclude Include="Error.h" />
     <ClInclude Include="eScene.h" />
     <ClInclude Include="Fps.h" />
@@ -171,6 +198,76 @@
     <ClInclude Include="SystemMain.h" />
     <ClInclude Include="Task.h" />
     <ClInclude Include="TitleScene.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="dat\image\background\01spell\00.png" />
+    <Image Include="dat\image\background\01spell\01.png" />
+    <Image Include="dat\image\background\01\floor.png" />
+    <Image Include="dat\image\background\01\fusuma.png" />
+    <Image Include="dat\image\enemy\appear.png" />
+    <Image Include="dat\image\enemy\big.png" />
+    <Image Include="dat\image\enemy\disappear.png" />
+    <Image Include="dat\image\enemy\hp.png" />
+    <Image Include="dat\image\enemy\hpBack.png" />
+    <Image Include="dat\image\enemy\hpBackShort.png" />
+    <Image Include="dat\image\enemy\normal.png" />
+    <Image Include="dat\image\enemy\small.png" />
+    <Image Include="dat\image\player\bodyDress\上1.png" />
+    <Image Include="dat\image\player\bodyDress\上2-1.png" />
+    <Image Include="dat\image\player\bodyDress\上2-2.png" />
+    <Image Include="dat\image\player\bodyDress\上2-3.png" />
+    <Image Include="dat\image\player\bodyDress\下1.png" />
+    <Image Include="dat\image\player\bodyDress\下2-1.png" />
+    <Image Include="dat\image\player\bodyDress\下2-2.png" />
+    <Image Include="dat\image\player\bodyDress\下2-3.png" />
+    <Image Include="dat\image\player\bodyDress\右0.5.png" />
+    <Image Include="dat\image\player\bodyDress\右1.0.png" />
+    <Image Include="dat\image\player\bodyDress\右1.5.png" />
+    <Image Include="dat\image\player\bodyDress\右2-1.png" />
+    <Image Include="dat\image\player\bodyDress\右2-2.png" />
+    <Image Include="dat\image\player\bodyDress\右2-3.png" />
+    <Image Include="dat\image\player\bodyDress\左0.5.png" />
+    <Image Include="dat\image\player\bodyDress\左1.0.png" />
+    <Image Include="dat\image\player\bodyDress\左1.5.png" />
+    <Image Include="dat\image\player\bodyDress\左2-1.png" />
+    <Image Include="dat\image\player\bodyDress\左2-2.png" />
+    <Image Include="dat\image\player\bodyDress\左2-3.png" />
+    <Image Include="dat\image\player\bodyDress\静止0.png" />
+    <Image Include="dat\image\player\bodyDress\静止1.png" />
+    <Image Include="dat\image\player\bodyDress\静止2.png" />
+    <Image Include="dat\image\player\body\hidari0.5.png" />
+    <Image Include="dat\image\player\body\hidari1.0.png" />
+    <Image Include="dat\image\player\body\hidari1.5.png" />
+    <Image Include="dat\image\player\body\hidari2-1.png" />
+    <Image Include="dat\image\player\body\hidari2-2.png" />
+    <Image Include="dat\image\player\body\hidari2-3.png" />
+    <Image Include="dat\image\player\body\migi0.5.png" />
+    <Image Include="dat\image\player\body\migi1.0.png" />
+    <Image Include="dat\image\player\body\migi1.5.png" />
+    <Image Include="dat\image\player\body\migi2-1.png" />
+    <Image Include="dat\image\player\body\migi2-2.png" />
+    <Image Include="dat\image\player\body\migi2-3.png" />
+    <Image Include="dat\image\player\body\seishi0.png" />
+    <Image Include="dat\image\player\body\seishi1.png" />
+    <Image Include="dat\image\player\body\seishi2.png" />
+    <Image Include="dat\image\player\body\shita1.png" />
+    <Image Include="dat\image\player\body\shita2-1.png" />
+    <Image Include="dat\image\player\body\shita2-2.png" />
+    <Image Include="dat\image\player\body\shita2-3.png" />
+    <Image Include="dat\image\player\body\ue1.png" />
+    <Image Include="dat\image\player\body\ue2-1.png" />
+    <Image Include="dat\image\player\body\ue2-2.png" />
+    <Image Include="dat\image\player\body\ue2-3.png" />
+    <Image Include="dat\image\player\bullet00.png" />
+    <Image Include="dat\image\player\bullet01.png" />
+    <Image Include="dat\image\player\bulletBall.png" />
+    <Image Include="dat\image\player\graze.png" />
+    <Image Include="dat\image\player\hitMark.png" />
+    <Image Include="dat\image\player\laser.png" />
+    <Image Include="dat\image\player\laserMain.png" />
+    <Image Include="dat\image\player\laserRoot.png" />
+    <Image Include="dat\image\player\ring.png" />
+    <Image Include="dat\image\player\shotLaser.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
